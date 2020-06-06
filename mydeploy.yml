@@ -3,18 +3,16 @@ kind: Deployment
 metadata:
   name: myweb-deploy
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-       env: production
-#    matchExpressions:
-#      - { key: env,  operator: In,  values: [ production ] }
+       env: slave
   template:
     metadata:
      name: myweb-pod
      labels:
-       env: production
+       env: slave
     spec:
       containers:
       - name: myweb-con
-        image: vimal13/apache-webserver-php:v2
+        image: hardik1999/jenkins_slave
