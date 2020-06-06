@@ -9,7 +9,7 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s 
 RUN chmod +x ./kubectl
 RUN mkdir /root/.kube /root/jenkins
 RUN sudo mv ./kubectl /usr/local/bin/kubectl
-COPY ca.crt client.crt client.key myinfo myweb-deploy.yml /root/
+COPY ca.crt client.crt client.key myinfo mydeploy.yml /root/
 RUN mv /root/myinfo /root/.kube/config
  
 RUN yum install httpd -y
