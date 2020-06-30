@@ -1,6 +1,7 @@
+<h1>
+  <center>
 <?php
-echo "Hello World!";
+echo "Aloha!";
 ?>
-<?php
-echo "Hello World!";
-?>
+  </center>
+</h1>
